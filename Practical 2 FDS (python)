@@ -1,0 +1,154 @@
+"""
+Program by Shriraj Deshpande
+Write a Python program to store marks scored in subject “Fundamental of Data
+Structure” by N students in the class. Write functions to compute following:
+a) The average score of class
+b) Highest score and lowest score of class
+c) Count of students who were absent for the test
+d) Display mark with highest frequency
+"""
+
+#<-------------------------------------------------------------------------------------------------->
+
+# Function for average score of the class
+
+def average(lst):
+    sum=0
+    count=0
+    for i in range(len(lst)):
+        sum+=lst[i]
+        count+=1
+    avg=sum/count
+    print("Total marks : ", sum,"\nAverage marks : ",avg)
+    return avg
+
+
+#<-------------------------------------------------------------------------------------------------->
+
+# Function for Highest score in the test for the class
+
+def maximum(lst):
+    for i in range(len(lst)):
+        Max=lst[0]
+        break
+    for i in range(1,len(lst)):
+        if lst[i]>Max:
+            Max=lst[i]
+    return(Max)
+
+#<-------------------------------------------------------------------------------------------------->
+
+# Function for Lowest score in the test for the class
+
+def minimum(lst):
+    for i in range(len(lst)):
+        Min=lst[0]
+        break
+    for i in range(1,len(lst)):
+        if lst[i]<Min:
+            Min=lst[i]
+    return(Min)
+
+#<-------------------------------------------------------------------------------------------------->
+
+# Count of students who were absent for the test
+
+def abs(lst):
+    ab=len(lst)
+    return (ab)
+
+#<-------------------------------------------------------------------------------------------------->
+
+# Display mark with highest frequency
+
+
+def maxf(lst):
+    i=0
+    Max=0
+    print("Marks  |  Frequency")
+    for j in lst:
+        if (lst.index(j)==i):
+            print(j,"    |  ",lst.count(j))
+            if lst.count(j)>Max:
+                Max=lst.count(j)
+                mark=j
+        i=i+1
+    return(mark,Max)
+
+#<-------------------------------------------------------------------------------------------------->
+
+#main function
+temp=[]
+absent=[]
+marks=[]
+n=int(input("Enter total number of students : "))
+for i in range(n):
+    temp.append(int(input("Enter marks of student "+str(i+1)+" (enter -99 if student is absent) : ")))
+    
+for i in temp:
+    if i==-99:
+        absent.append(i)
+    else:
+        marks.append(i)
+
+x=1
+while x==1:
+    print("\n\n<--------------------MENU-------------------->\n")
+    print("1. Total and Average Marks of the Class")
+    print("2. Highest and Lowest Marks in the Class")
+    print("3. Number of Students absent for the test")
+    print("4. Marks with Highest Frequency")
+    print("5. Exit\n")
+    y=int(input("Enter your Choice (from 1 to 5) :"))
+
+    if y==1:
+        average(marks)
+        a = input("Do you want to continue (y/n) :")
+        if a == "y":
+            x = 1
+        else:
+            x = 0
+            print("Thanks for using this program!")
+
+    elif y==2:
+        print("Highest Score in Class : ", maximum(marks))
+        print("Lowest Score in Class : ", minimum(marks))
+        a = input("Do you want to continue (y/n) :")
+        if a == "y":
+            x = 1
+        else:
+            x = 0
+            print("Thanks for using this program!")
+
+    elif y==3:
+        print("Number of Students absent in the test : ", abs(absent))
+        a = input("Do you want to continue (y/n) :")
+        if a == "y":
+            x = 1
+        else:
+            x = 0
+            print("Thanks for using this program!")
+
+    elif y==4:
+        maxf(marks)
+        a = input("Do you want to continue (y/n) :")
+        if a == "y":
+            x = 1
+        else:
+            x = 0
+            print("Thanks for using this program!")
+
+    elif y==5:
+        x=0
+        print("Thanks for using this program!")
+
+    else:
+        print("!!Wrong Choice!! ")
+        a=input("Do you want to continue (y/n) :")
+        if a=="y":
+            x=1
+        else:
+            x=0
+            print("Thanks for using this program!")
+
+#<---------------------------------------------END OF PROGRAM--------------------------------------->
