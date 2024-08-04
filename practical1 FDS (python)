@@ -1,4 +1,5 @@
-'''
+"""
+Program written by Shriraj Deshpande
 Experiment No. 1 : In a second year computer engineering class, group A students play cricket, group B students play
                    badminton and group C students play football.
                    Write a python program using functions to compute following:
@@ -6,8 +7,8 @@ Experiment No. 1 : In a second year computer engineering class, group A students
                    b) List of students who play either cricket or badminton but not both.
                    c) Number of students who play neither cricket nor badminton.
                    d) Number of students who play cricket and football but not badminton.
-(NOTE : While realising the group, duplicate entries should be avoided. Do not use SET built-in functions)
-'''
+(NOTE : While realising the group, duplicate entries should be avoided. Do not use SET built-in functions)"""
+
 #function for removing duplicate elements
 
 def removeduplicate(a):
@@ -17,7 +18,7 @@ def removeduplicate(a):
             re.append(i)
     return re
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #function to find interscetion 
 
@@ -28,7 +29,7 @@ def intersection(lst1,lst2):
             inter.append(i)
     return inter
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #function to find union
 
@@ -39,7 +40,7 @@ def union(lst3,lst4):
             uni.append(i)
     return uni
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #function to find difference
 
@@ -50,7 +51,7 @@ def diff(lst5,lst6):
             dif.append(i)
     return dif
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #function to find symmetric difference
 
@@ -61,7 +62,7 @@ def sydiff(lst7,lst8):
     sdif=union(dif1,dif2)
     return sdif
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #function to find list of students who play both cricket and badminton
 
@@ -70,7 +71,7 @@ def cab(lst1,lst2):
     print("\nList of students who play both cricket and badminton = ",lst3)
     return len(lst3)
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #function to find list of students who play either cricket or badminton but not both
 
@@ -79,7 +80,7 @@ def cobbnb(lst1,lst2):
     print("\nList of students who play either cricket or badminton but not both = ",lst3)
     return len(lst3)
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #function to find number of students who play neither cricket nor badminton
 
@@ -88,7 +89,7 @@ def ncnb(lst1,lst2,lst3):
     print("\nNumber of students who play neither cricket nor badminton = ",lst4)
     return len(lst4)
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #function to find number of students who play cricket and football but not badminton
 
@@ -97,7 +98,7 @@ def cafbnb(lst1,lst2,lst3):
     print("\nNumber of students who play cricket and football but not badminton = ",lst4)
     return len(lst4)
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #main function
 #list of total students in se comp
@@ -109,7 +110,7 @@ for i in range(0,n):
     secom.append(std)
 print("Original list of students = " + str(secom))
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #list of cricket
 
@@ -122,7 +123,7 @@ print("\nOriginal list of students who play cricket = " +str(cricket))
 cricket=removeduplicate(cricket)
 print("\nList of students who play cricket after removing duplicate entries = " +str(cricket))
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #list of football
 
@@ -135,7 +136,7 @@ print("\nOriginal list of students who play football = " +str(football))
 football=removeduplicate(football)
 print("\nList of students who play football after removing duplicate entries = " +str(football))
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 #list of badminton
 
@@ -148,7 +149,7 @@ print("\nOriginal list of students who play badminton = " +str(badminton))
 badminton=removeduplicate(badminton)
 print("\nList of students who play badminton after removing duplicate entries = " +str(badminton))
 
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<------------------------------------------------------------------------------------------>
 
 a=1
 while a==1:
