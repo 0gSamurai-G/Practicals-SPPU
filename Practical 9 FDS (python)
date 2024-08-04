@@ -1,0 +1,71 @@
+"""
+Program written by Shriraj Deshpande
+Write a python program to compute following computation on matrix:
+a) Addition of two matrices
+b) Subtraction of two matrices
+c) Multiplication of two matrices
+d) Transpose of a matrix"""
+
+#<---------------------------------------------------------------------------------->
+#Function to take 2 matrices
+
+def mat():
+    r=int(input("Enter the no. of rows : "))
+    c=int(input("Enter the no. of columns : "))
+    print("Enter the elements rowwise : ")
+    matrix=[]
+    for i in range(r):
+        a=[]
+        for j in range(c):
+            a.append(int(input()))
+        matrix.append(a)
+
+    for i in range(r):
+        for j in range(c):
+          print(matrix[i][j], end=" ")
+        print()
+    return matrix
+#<---------------------------------------------------------------------------------->
+#Calling mat function 
+a=mat()
+b=mat()
+
+#<---------------------------------------------------------------------------------->
+#a) Addition of two matrices
+
+print("Addition : \n")
+result1 = [[a[i][j] + b[i][j] for j in range(len(a[0]))]    for i in range(len(a))]
+for r in result1:
+    print(r)
+
+#<---------------------------------------------------------------------------------->
+#b) Subtraction of two matrices
+
+print("Subtraction : \n")
+result2 = [[a[i][j] - b[i][j] for j in range(len(a[0]))]    for i in range(len(a))]
+for r in result2:
+    print(r)
+
+#<---------------------------------------------------------------------------------->
+#c) Multiplication of two matrices
+
+print("Multiplication : \n")
+result3 = [[a[i][j] * b[i][j] for j in range(len(a[0]))]    for i in range(len(a))]
+for r in result3:
+    print(r)
+
+#<---------------------------------------------------------------------------------->
+#d) Function for transpose of a matrix
+
+def trans(x):
+    print("Transpose : \n")
+    result4=[[x[j][i] for j in range(len(x))] for i in range(len(a[0]))]
+    for r in result4:
+        print(r)
+
+#<---------------------------------------------------------------------------------->
+#Calling trans function
+trans(a)
+trans(b)
+
+#<-----------------------------------------END OF CODE----------------------------------------->
