@@ -8,13 +8,14 @@ e) To count the occurrences of each word in a given string"""
 a=input("Enter a sentence : ")
 print()
 
-
+<----------------------------------------------------------------------------------->
 #a) To display word with the longest length
 
 b=max(a.split(), key=len)
 print("Longest word is : ",b," \nAnd its length is : ",len(b))
 print()
 
+<----------------------------------------------------------------------------------->
 #b) To determines the frequency of occurrence of particular character in the string
 
 c={}
@@ -27,7 +28,7 @@ for i in a:
 print("Count of all characters in sentence is :\n "+ str(c))
 print()
 
-
+<----------------------------------------------------------------------------------->
 #c) To check whether given string is palindrome or not
 
 print("Original sentence is : " +a)
@@ -38,6 +39,7 @@ else:
     print(a+" is not a palindrome")
 print()
 
+<----------------------------------------------------------------------------------->
 #d) To display index of first appearance of the substring
 
 e=str(input("Enter a substring to find : "))
@@ -49,6 +51,7 @@ else:
     print("Substring is found")
 print()
 
+<----------------------------------------------------------------------------------->
 #e) To count the occurrences of each word in a given string
 
 print("Following are the count the frequency of each word in a given string")
