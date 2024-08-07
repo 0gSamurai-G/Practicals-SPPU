@@ -1,0 +1,61 @@
+"""
+Program by Shriraj Deshpande
+Write a Python program that computes the net amount of a bank account based a
+transaction log from console input. The transaction log format is shown as following: D
+100 W 200 (Withdrawal is not allowed if balance is going negative. Write functions for
+withdraw and deposit) D means deposit while W means withdrawal.
+Suppose the following input is supplied to the program:
+D 300
+D 300
+W 200
+D 100
+Then, the output should be: 500
+"""
+#<--------------------------------------------------------------------->
+# Initial balance
+balance=0
+
+# Function to deposit money
+
+def deposit(a):
+    global balance
+    balance += a
+    print("Balance: ",balance)
+
+#<--------------------------------------------------------------------->
+    
+# Function to withdrawl money
+
+def withdraw(b):
+    global balance
+    if (balance >=b):
+        balance -= b
+        print("Balance: ",balance)
+
+        
+    else:
+        print("Insufficient balance!")
+
+#<--------------------------------------------------------------------->
+# main code
+
+while True:
+    data=input("Please enter the transaction details(D/W) (enter exit to leave the program): ")
+    if (data=="exit"):
+        print("Thank you for using program!")
+        break
+    if (data == "D"):
+        m=int(input("Enter the amount: "))
+        deposit(m)
+    if (data=="W"):
+        z=int(input("Enter the amount: "))
+        withdraw(z)
+    print("Do you want to continue? (y/n)")
+    n=input()
+    if n=="y":
+        True
+    elif n=="n":
+        print("Thank you for using program!")
+        break
+        
+#<---------------------------------END OF PROGRAM------------------------------------>        
