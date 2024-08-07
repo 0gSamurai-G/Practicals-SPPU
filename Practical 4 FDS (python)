@@ -37,7 +37,7 @@ def withdraw(b):
         print("Insufficient balance!")
 
 
-
+# main code
 while True:
     data=input("Please enter the transaction details(D/W) or enter exit to quit: ")
     if data=="exit":
