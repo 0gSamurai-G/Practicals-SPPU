@@ -1,7 +1,8 @@
+//Program by Shriraj Deshpande 
 //Write C++ program to draw the line styles using DDA and Bresenham‘s algorithm (solid,
 //dotted, dashed, dash dot and thick). Inherit pixel class and Use Constructors.
 
-// C++ program for DDA line generation 
+
 #include<graphics.h>
 #include <bits/stdc++.h> 
 using namespace std; 
