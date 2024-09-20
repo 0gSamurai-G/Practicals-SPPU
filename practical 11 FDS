@@ -1,0 +1,138 @@
+'''Write a Python program to store roll numbers of student in array who attended training program in random order.
+Write function for searching whether particular student attended training program or not, using Linear search and Sentinel search.'''
+
+
+n=int(input("Enter the no. of students:"))
+roll=[]
+for i in range(n):
+    stu=roll.append(int(input("Enter a roll number:")))
+for r in roll:
+    print(r)
+
+
+#function for liner search
+
+def linear():
+    key=int(input("Enter a roll number:"))
+    index=0
+    comp=0
+    for a in roll:
+        if a==key:
+            comp+=1
+            print(key,"found in the list at index",index,"after",comp,"comparision")
+            break
+
+        else:
+            comp+=1
+            index+=1
+            
+    if index==n:
+        print("Roll number not found!")
+
+linear()
+
+#function for sentinel search
+
+def sentinel():
+    k=int(input("Enter the roll number:"))
+    last=roll[n-1]
+    roll[n-1]=k
+    index=0
+    comp=0
+    for b in roll:
+        if b==k:
+            comp+=1
+            break
+        else:
+            index+=1
+            comp+=1
+
+    if (comp<n or k==last):
+        print(k,"found at index",index,"after",comp,"comparision")
+
+sentinel()
+
+
+n=int(input("Enter the no. of students:"))
+roll=[]
+for i in range(n):
+    stu=roll.append(int(input("Enter a roll number:")))
+for r in roll:
+    print(r)
+
+
+
+
+n=len(roll)
+swapped=False
+
+for i in range(n):
+    for j in range(0,n-(i+1)):
+        if(roll[j]>roll[j+1]):
+            swapped=True
+            roll[j],roll[j+1]=roll[j+1],roll[j]
+    if(swapped==False):
+        break
+print("sorted list:",roll)
+
+
+def binary_Search():
+    key = int(input("\n Enter the Roll No:"))
+    low = 0
+    high = len(roll) - 1
+    mid = 0
+    comp = 0
+    while low <= high:
+        mid = int((low + high) / 2)
+        if key == roll[mid]:
+            comp += 1
+            print("\t Key Found")
+            print("\t At Index = ",mid)
+            print("\t Comparisons = ", comp)
+            break
+        elif key < roll[mid]:
+            
+            high = mid - 1
+        else:
+            low = mid + 1
+            comp += 1
+        if low > high:
+            comp+1
+            print("\t Key Not Found")
+
+binary_Search()
+
+def fibonacci_Search():
+    fibo = [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+    key = int(input("\n\t Enter Roll No to search: "))
+    k = 0 
+    while fibo[k] < len(roll):
+        k += 1
+        offset = -1
+        comp = 0
+    while k > 0: 
+        i = min((offset + fibo[k-2]) , len(roll)-1)
+        if key == roll[ i ]:
+            comp += 1
+            print("Student attended")
+            break
+        elif key > roll[ i ]:
+            k = k-1
+            offset = i
+        else:
+            k = k - 2
+            comp += 1
+    if k <= 0:
+        print("\t Student Have Not Attended Training Program.")
+        print("\t Comparisons Needed = ", comp)
+
+fibonacci_Search()
+
+
+
+
+            
+            
+            
+
